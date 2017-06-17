@@ -53,7 +53,6 @@ public class Korean extends Language {
   private WordTokenizer wordTokenizer;
   private LuceneLanguageModel languageModel;
 
-  /*
   @Override
   public SentenceTokenizer getSentenceTokenizer() {
     if (sentenceTokenizer == null) {
@@ -61,7 +60,6 @@ public class Korean extends Language {
     }
     return sentenceTokenizer;
   }
-  */
 
   @Override
   public String getName() {
