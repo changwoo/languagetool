@@ -37,7 +37,7 @@ import org.languagetool.synthesis.Synthesizer;
 import org.languagetool.tagging.Tagger;
 import org.languagetool.tagging.disambiguation.Disambiguator;
 import org.languagetool.tagging.disambiguation.rules.XmlRuleDisambiguator;
-//import org.languagetool.tagging.ko.KoreanTagger;
+import org.languagetool.tagging.ko.KoreanTagger;
 import org.languagetool.tokenizers.SRXSentenceTokenizer;
 import org.languagetool.tokenizers.SentenceTokenizer;
 import org.languagetool.tokenizers.WordTokenizer;
@@ -76,13 +76,13 @@ public class Korean extends Language {
     return new String[]{"KR"};
   }
 
-  // @Override
-  // public Tagger getTagger() {
-  //   if (tagger == null) {
-  //     tagger = new KoreanTagger();
-  //   }
-  //   return tagger;
-  // }
+  @Override
+  public Tagger getTagger() {
+    if (tagger == null) {
+      tagger = new KoreanTagger();
+    }
+    return tagger;
+  }
 
   // /**
   //  * @since 2.3
