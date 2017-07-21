@@ -5709,6 +5709,14 @@ It [really!] works. This is e.g. Mr. Smith, who talks slowly... And this is anot
 <beforebreak>(^|[\-\.\s])(\p{N}+|[A-Zㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ가나다라마바사아자차카타파하])\.\s+</beforebreak>
 <afterbreak>\p{L}</afterbreak>
 </rule>
+<rule break="no">
+<beforebreak>\(\.\.\.\) </beforebreak>
+<afterbreak>\p{L}</afterbreak>
+</rule>
+<rule break="no">
+<beforebreak>\([!?…]\) </beforebreak>
+<afterbreak>\p{L}</afterbreak>
+</rule>
 <rule break="yes">
 <beforebreak>[\.!?…][\u00BB\u2019\u201D\u203A"'\p{Pe}\u0002¹²³]*\s</beforebreak>
 <afterbreak></afterbreak>
