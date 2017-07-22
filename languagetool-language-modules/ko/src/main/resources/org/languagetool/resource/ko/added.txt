@@ -1,0 +1,6 @@
+# tab separated lines
+# 파생형태<tab>원형<tab>태그
+뭐가	뭐	NP
+뭐를	뭐	NP
+낳나요	낳다	PV
+낫나요	낫다	PA
