@@ -1,5 +1,8 @@
-# tab separated lines
 # 파생형태<tab>원형<tab>태그
+저희	저희	NP
+나라	나라	NC
+나라에서는	나라	NC
+그래요	그렇다	PA
 뭐가	뭐	NP
 뭐를	뭐	NP
 낳나요	낳다	PV

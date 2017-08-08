@@ -1,0 +1,2 @@
+# File Encoding: UTF-8
+# Format: fullform baseform postags (tab separated)
