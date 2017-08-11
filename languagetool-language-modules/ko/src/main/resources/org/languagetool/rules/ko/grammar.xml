@@ -37,14 +37,64 @@ USA
 
 <rules lang="ko" xsi:noNamespaceSchemaLocation="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <category id="CONVENTION" name="관례적 표현" type="style">
-      <rule id="우리나라" name="우리나라">
+      <rule id="우리_나라" name="우리_나라">
 	<pattern>
 	  <token>저희</token>
 	  <token>나라</token>
 	</pattern>
         <message>혹시 <suggestion>우리 나라</suggestion>를 의도하셨나요?</message>
         <short>잘못된 높임법</short>
-        <example correction='우리 나라'><marker>저희 나라</marker> 만세.</example>         
+        <example correction='우리 나라'><marker>저희 나라</marker> 만세.</example>
       </rule>
+
+      <rule id="추종을_불허하다" name="추종을_불허하다">
+	<pattern>
+	  <token>타의</token>
+	  <token>추종을</token>
+	  <marker>
+	    <or>
+	      <token inflected="yes">부러워하다</token>
+	      <token inflected="yes">불하하다</token>
+	    </or>
+	  </marker>
+	</pattern>
+        <message>혹시 <suggestion>불허한다</suggestion>를 의도하셨나요?</message>
+        <short>잘못된 용법</short>
+        <example correction="불허한다">이는 타의 추종을 <marker>부러워한다</marker>.</example>
+        <example correction="불허한다">이는 타의 추종을 <marker>불하한다</marker>.</example>
+      </rule>
+
+      <rule id="어이가_없다" name="어이가_없다">
+	<pattern>
+	  <marker>
+	    <token>어의가</token>
+	  </marker>
+	  <token inflected="yes">없다</token>
+	</pattern>
+        <message>혹시 <suggestion>어이가</suggestion>를 의도하셨나요?</message>
+        <short>잘못된 용법</short>
+        <example correction="어이가">참 <marker>어의가</marker> 없네.</example>
+      </rule>
+
+      <rule id="부치다_붙이다" name="부치다_붙이다">
+	<pattern>
+	  <or>
+	    <token>국민투표에</token>
+	    <token>투표에</token>
+	    <token>회의에</token>
+	    <token>표결에</token>
+	    <token>의결에</token>
+	    <token>재판에</token>
+	  </or>
+	  <marker>
+	    <token inflected="yes">붙이다</token>
+	  </marker>
+	</pattern>
+        <message>혹시 <suggestion>부쳐</suggestion>를 의도하셨나요?</message>
+        <short>잘못된 용법</short>
+	<!-- 1987년 대한민국헌법 제130조 2항 -->
+        <example correction="부쳐">헌법개정안은 국회가 의결한 후 30일 이내에 국민투표에 <marker>붙여</marker> 국회의원선거권자 과반수의 투표와 투표자 과반수의 찬성을 얻어야 한다.</example>
+      </rule>
+
     </category>
 </rules>
